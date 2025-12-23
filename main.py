@@ -1,28 +1,27 @@
 """
-:Date        : 2025-07-22 16:49:07
-:LastEditTime: 2025-08-27 07:26:48
-:Description : 
+:Date        : 2025-12-04 08:37:06
+:LastEditTime: 2025-12-11 11:55:32
+:Description : CiliaSnM - Minimal Version
 """
+#!/usr/bin/env python3
+
 import sys
+import multiprocessing
 from PyQt5.QtWidgets import QApplication
-from ui import MainWindow
-from action import MainController
+from ui.main_window import MainWindow
 
 def main():
     """
-    程序入口
+    Start Qt Application
     """
     app = QApplication(sys.argv)
-    # 创建视图
-    view = MainWindow()
-    # 创建工作模块
-    # 创建控制器，这个必须强引用避免内存回收导致控件功能失效
-    controller = MainController(view) # pylint: disable=unused-variable
+    app.setApplicationName("CiliaSnM")
 
-    # 显示界面
-    view.show()
-    # 启动应用
+    window = MainWindow()
+    window.show()
+
     sys.exit(app.exec_())
 
-if __name__ == '__main__':
+if __name__ == "__main__":
+    multiprocessing.freeze_support()
     main()

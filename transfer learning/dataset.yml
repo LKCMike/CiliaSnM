@@ -1,0 +1,11 @@
+path: ./dataset
+train: images/train
+val: images/val
+
+# Class definition
+names:
+  0: no_cilia
+  1: with_cilia
+
+# Ratio of no_cilia to with_cilia
+cls_pw: [1.0, 1.9]
