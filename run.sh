@@ -69,6 +69,10 @@ else
     echo "requirements.txt not found, skipping package installation."
 fi
 
+# OpenCV PyQt Conflict resolve
+venv/bin/python -m pip uninstall -y opencv-python
+venv/bin/python -m pip install opencv-python-headless==4.12.0.88
+
 # Launch app
 echo "Executing main.py..."
 venv/bin/python main.py

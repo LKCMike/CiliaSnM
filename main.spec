@@ -61,7 +61,7 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
-    name='Cilia Statistic and Measurement',
+    name='CiliaSnM',
     contents_directory='lib',
     debug=False,
     bootloader_ignore_signals=False,
